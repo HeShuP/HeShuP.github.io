@@ -1,7 +1,7 @@
 ## Welcome to GitHub Pages
 Blog Test
 
-* [单例模式例子](_posts/2022-02-20-long.md)
+* [BlogTest](_posts/2022-02-20-long.md)
 * [抽象工厂模式例子](_posts)
 * [适配器模式例子](AdapterPattern)
 * [桥接模式例子](BridgePattern)
