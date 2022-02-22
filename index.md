@@ -1,5 +1,6 @@
 ## Welcome to GitHub Pages
-Blog Test
+![image-20220212225715558](https://github.com/HeShuP/HeShuP.github.io/blob/gh-pages/_posts/images/image-20220212225715558.png)
+![image-20220212225735931](./images/image-20220212225735931.png)
 
 * [BlogTest](_posts/2022-02-20-long.md)
 * [抽象工厂模式例子](_posts)
