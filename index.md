@@ -1,6 +1,12 @@
 ## Welcome to GitHub Pages
 Blog Test
 
+* [BlogTest](_posts/2022-02-20-long.md)
+* [抽象工厂模式例子](_posts)
+* [适配器模式例子](AdapterPattern)
+* [桥接模式例子](BridgePattern)
+* [观察者模式例子](ObserverPattern)
+
 You can use the [editor on GitHub](https://github.com/HeShuP/debug/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
