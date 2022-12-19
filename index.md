@@ -10,10 +10,10 @@
 
 ### 数据库类
 
-* [1.0 PostgreSQL简介](_posts/PostgreSQL/0_PostgreSQL_introduction.md)
+* [1.0 PostgreSQL简介](_posts/postgresql/0_introduction.md)
 
 ## About Me
 
-建设中...
-csdn：https://blog.csdn.net/rl529014
+建设中...  
+csdn：https://blog.csdn.net/rl529014  
 bilibili: https://space.bilibili.com/84360636?spm_id_from=333.1007.0.0
