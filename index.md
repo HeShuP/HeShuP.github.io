@@ -10,7 +10,7 @@
 
 ### 数据库类
 
-* [1.0 PostgreSQL简介](_posts/postgresql-0-introduction.md)
+* [1.0 PostgreSQL简介](_posts/2022-12-19-0-introduction.md)
 
 ## About Me
 
