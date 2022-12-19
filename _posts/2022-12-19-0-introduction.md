@@ -1,5 +1,3 @@
-#
-
 ## PostgreSQL背景
 
 &emsp;&emsp;PostgreSQL 是一款高级的**企业级开源关系型**数据库，支持SQL（关系型）和JSON（非关系型）查询，经过超过30多年的积极开发，在可靠性、功能稳健性和性能方面有良好的表现。
@@ -8,15 +6,15 @@
 
 ## 链接 &#x20;
 
-官网地址：<https://www.postgresql.org/>
-开源代码地址：<https://github.com/postgres>
-wiki关于PosgreSQL的介绍：<https://zh.wikipedia.org/wiki/PostgreSQL>
+官网地址：<https://www.postgresql.org/>  
+开源代码地址：<https://github.com/postgres>  
+wiki关于PosgreSQL的介绍：<https://zh.wikipedia.org/wiki/PostgreSQL>  
 
 ## 国产数据库
 
-在摩天轮有国产数据库排名，是动态更新的，地址：<https://www.modb.pro/dbRank>
+&emsp;&emsp;在摩天轮有国产数据库排名，是动态更新的，地址：<https://www.modb.pro/dbRank>
 
-![节点](images\postgresql\sort.png)
+![节点](images\2022-12-19-0-sort.png)
 &emsp;&emsp;粗略看了一下，没有去看源码细纠，在国产数据库的排行前10中，基于PostgreSQL二次开发的数据库就挺多的，当然也有基于MySQL数据库做的二次开发，源代码完全自主的国产数据库，听说达梦算一个，其他的未知。如此看来PostgreSQL数据库的流行度确实值得大家去学习，PostgreSQL其自诩为"世界上最先进的开源关系数据库"，是值得大家细品其源码的。
 
 ## 关于国产自主
