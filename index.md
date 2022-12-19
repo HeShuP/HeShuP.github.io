@@ -7,7 +7,7 @@
 ### 数据库类
 
 * [1.0 PostgreSQL简介](_posts/2022-12-19-0-introduction.md)
-* [1.1 PostgreSQL编译和安装](_posts/2022-12-19-0-introduction.md)
+* [1.1 PostgreSQL编译和安装](_posts/2022-12-19-1-compile.md)
 
 ### 观点看法类  
 * [建设中...]
