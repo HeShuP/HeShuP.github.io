@@ -14,7 +14,7 @@ wiki关于PosgreSQL的介绍：<https://zh.wikipedia.org/wiki/PostgreSQL>
 
 &emsp;&emsp;在摩天轮有国产数据库排名，是动态更新的，地址：<https://www.modb.pro/dbRank>
 
-![节点](images\2022-12-19-0-sort.png)
+![排名](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/sort.png)
 &emsp;&emsp;粗略看了一下，没有去看源码细纠，在国产数据库的排行前10中，基于PostgreSQL二次开发的数据库就挺多的，当然也有基于MySQL数据库做的二次开发，源代码完全自主的国产数据库，听说达梦算一个，其他的未知。如此看来PostgreSQL数据库的流行度确实值得大家去学习，PostgreSQL其自诩为"世界上最先进的开源关系数据库"，是值得大家细品其源码的。
 
 ## 关于国产自主
