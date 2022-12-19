@@ -2,12 +2,12 @@
 
 ### 计算机基础类
 
-* [long类型占用多少个字节 ？](_posts/2022-02-20-long.md)
+* [long类型占用多少个字节 ？](_posts/2022-02-20-long数据类型的长度.md)
 
 ### 数据库类
 
-* [1.0 PostgreSQL简介](_posts/2022-12-19-0-introduction.md)
-* [1.1 PostgreSQL编译和安装](_posts/2022-12-19-1-PostgreSQL编译和安装.md)
+* [1.0 PostgreSQL简介](_posts/2022-12-19-PostgreSQL介绍.md)
+* [1.1 PostgreSQL编译和安装](_posts/2022-12-19-PostgreSQL编译和安装.md)
 
 ### 观点看法类  
 * [建设中...]
