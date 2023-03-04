@@ -30,7 +30,7 @@ Linux系统版本：
     ├── README
     ├── README.git
     └── src
-
+    
     4 directories, 9 files
 
 # 源码编译、安装
@@ -44,7 +44,7 @@ Linux系统版本：
         --enable-debug：编译程序为可调试  
 
 2. 编译  
-    
+   
         make -j4
 
 3. 安装  
@@ -59,7 +59,7 @@ Linux系统版本：
         ├── include
         ├── lib
         └── share
-
+        
         4 directories, 0 files
 
 # 运行PostgreSQL 
@@ -70,13 +70,13 @@ Linux系统版本：
 
 ## 启动数据库
     ./bin/pg_ctl -D data/ start
-![initdb](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/startdb.png) 
+![start](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/startdb.png) 
 
 ## 连接数据库
     ./bin/psql -p 5432 -U system -d postgres  
-   
+
 其中，-p参数为PostgreSQL的连接端口号；-U为连接用户名，-d是要连接的数据库名称。  
-![initdb](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/psql.png)   
+![psql](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/psql.png)   
 
 
 至此，完成了PostgreSQL的源码下载、编译、和启动、连接，数据库已经为可以使用状态。
