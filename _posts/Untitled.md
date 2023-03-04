@@ -1,0 +1,1 @@
+<img src="https://raw.githubusercontent.com/HeShuP/HeShuP.github.io/gh-pages/_posts/images/postgresql/startdb.png" alt="startdb" style="zoom:50%;" />

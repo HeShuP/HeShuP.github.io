@@ -74,13 +74,13 @@ heshupei@ubuntu:~/pg/postgres$ tree -L 1
 ```shell
 ./bin/initdb -D data -U system  
 ```
-![initdb](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/initdb.png) 
+![initdb](https://raw.githubusercontent.com/HeShuP/HeShuP.github.io/gh-pages/_posts/images/postgresql/initdb.png) 
 
 ## 启动数据库
 ```shell
 ./bin/pg_ctl -D data/ start  
 ```
-![startdb](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/start.png)
+![startdb](https://raw.githubusercontent.com/HeShuP/HeShuP.github.io/gh-pages/_posts/images/postgresql/startdb.png)
 
 ## 连接数据库
 ```shell
