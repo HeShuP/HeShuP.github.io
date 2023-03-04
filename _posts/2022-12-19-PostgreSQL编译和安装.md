@@ -72,27 +72,20 @@ heshupei@ubuntu:~/pg/postgres$ tree -L 1
 
 ## 创建数据集簇  
 ```shell
-./bin/initdb -D data -U system
+./bin/initdb -D data -U system  
 ```
-
-------
-
 ![initdb](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/initdb.png) 
 
 ## 启动数据库
 ```shell
-./bin/pg_ctl -D data/ start
+./bin/pg_ctl -D data/ start  
 ```
-
-------
-
 ![startdb](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/start.png)
 
 ## 连接数据库
 ```shell
 ./bin/psql -p 5432 -U system -d postgres  
 ```
-
 其中，-p参数为PostgreSQL的连接端口号；-U为连接用户名，-d是要连接的数据库名称。  
 ![psql](https://github.com/HeShuP/HeShuP.github.io/raw/gh-pages/_posts/images/postgresql/psql.png)   
 
