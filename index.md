@@ -8,7 +8,7 @@
 
 * [1.0 PostgreSQL简介](_posts/2022-12-19-PostgreSQL介绍.md)
 * [1.1 PostgreSQL编译和安装](_posts/2022-12-19-PostgreSQL编译和安装.md)
-* [1.1 PostgreSQL的锁](_posts/2024-01-11-PostgreSQL的锁.md)
+* [1.2 PostgreSQL的锁](_posts/2024-01-11-PostgreSQL的锁.md)
 
 ### 观点看法类  
 * [建设中...]
