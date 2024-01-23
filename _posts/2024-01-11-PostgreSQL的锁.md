@@ -35,7 +35,7 @@ pg中的锁可以分为3个层次：
 >     但在某些体系结构上，最好使用未锁定的指令轮询有争用的锁，并在它看起来空闲时再次尝试原子测试并设置。
 > TAS()和TAS_SPIN()不是API的一部分，不应直接调用。
 
-1. 特点
+3. 特点
     - 是一种和硬件结合的互斥锁；
     - 在pg中，提供两种自旋锁，一种是硬件相关的，一种是硬件无关的；
     - 适用于临界区比较小的情况；
@@ -83,7 +83,6 @@ pg中的锁可以分为3个层次：
    - 有等待队列（排他模式）；
    - 事务结束时会自动释放；
 
-
 ### 常规锁（Regular Lock）
 1. 介绍
 就是通常说的对数据库对象的锁。根据封锁对象的不同，锁粒度可以分为表锁、页锁、行锁等；按照等级，pg锁一共有8个等级。
@@ -91,20 +90,43 @@ pg中的锁可以分为3个层次：
 2. 常用接口
 
 ~~~C
-   #define NoLock					0
-   #define AccessShareLock			1	/* SELECT */
-   #define RowShareLock			2	/* SELECT FOR UPDATE/FOR SHARE */
-   #define RowExclusiveLock		3	/* INSERT, UPDATE, DELETE */
+   #define NoLock					      0
+   #define AccessShareLock			   1	/* SELECT */
+   #define RowShareLock			      2	/* SELECT FOR UPDATE/FOR SHARE */
+   #define RowExclusiveLock		   3	/* INSERT, UPDATE, DELETE */
    #define ShareUpdateExclusiveLock 4	/* VACUUM (non-FULL),ANALYZE, CREATE INDEX CONCURRENTLY */
-   #define ShareLock				5	/* CREATE INDEX (WITHOUT CONCURRENTLY) */
-   #define ShareRowExclusiveLock	6	/* like EXCLUSIVE MODE, but allows ROW SHARE */
-   #define ExclusiveLock			7	/* blocks ROW SHARE/SELECT...FOR UPDATE */
+   #define ShareLock				      5	/* CREATE INDEX (WITHOUT CONCURRENTLY) */
+   #define ShareRowExclusiveLock	   6	/* like EXCLUSIVE MODE, but allows ROW SHARE */
+   #define ExclusiveLock			   7	/* blocks ROW SHARE/SELECT...FOR UPDATE */
    #define AccessExclusiveLock		8	/* ALTER TABLE, DROP TABLE, VACUUM FULL, and unqualified LOCK TABLE  */
-   #define MaxLockMode				8   /* 定义了支持的最大锁模式数目，具体为8种锁模式 */
+   #define MaxLockMode				   8   /* 定义了支持的最大锁模式数目，具体为8种锁模式 */
 ~~~
+
+   以上定义的锁类型，从上到下，严格程度递增；
+   锁模式的冲突关系如下表：
+   xxx;
+
+
+   在函数 LockCheckConflicts中，用于检测申请的锁和现有锁，是否存在冲突；
 
 3. 特点
    - 封锁时间可以很长;
    - 有死锁检测机制;
    - 有等待队列;
    - 事务结束时会自动释放；
+
+
+死锁的处理机制
+进程在执行过程中，因争夺资源而造成的一种相互等待的现象，若无外力作用，他们将彼此等待，无法继续推进下去；
+
+死锁的预防
+   进程在请求锁时，如果请求失败，则进入等待队列；如果等待队列前面的进程，需要申请本进程已经持有的锁，则将本进程放到等待队列的前面。
+
+死锁的检测
+   使用WFG检查死锁， 
+   Soft edge\Hard edge；
+   如果是soft edge，则可以通过重排，而不是暴力破解死锁；
+
+死锁的消除
+   重排进程在请求队列中的位置；
+   暴力破解，终止一个事务；

@@ -48,14 +48,23 @@ heshupei@ubuntu:~/pg/postgres$ tree -L 1
         --enable-debug：编译程序为可调试  
 
 2. 编译  
-   
-        make -j4
+可以通过指定make的编译参数，设置编译范围。
+
+| 编译指令           | 描述                 |
+|--------------------|----------------------|
+| make -j4           | 不会编译doc、和插件  |
+| make world-bin -j4 | 编译bin和插件        |
+| make world -j4     | 编译bin、doc、和插件 |
+
 
 3. 安装  
 
         ![startdb](E:\学习资料\GitHub\Blog\HeShuP.github.io\_posts\images\postgresql\startdb.png)make install 
 
-4. 效果  
+对应的，install的时候，根据make的参数，添加合适的install参数；
+例如: 当编译指令为make world-bin -j4时，安装指令为make install world-bin
+
+1. 效果  
   
     ```shell
     heshupei@ubuntu:~/pg/debug$ tree -L 1
