@@ -1,18 +1,8 @@
-<script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script><script>mermaid.initialize({startOnLoad:true});</script>
-
 ## 概念介绍
 
 ### 页断裂
 
 页断裂也可以称为页折断或者半页写。PostgreSQL中，一个page默认为8kb，数据的写入是以page为单位的。而操作系统的一个page往往是4kb或者更小，这将导致PostgreSQL在写一个page到磁盘时，操作系统可能会将PG的一个page，分两次写入到磁盘。  如果系统出现故障，则会出现PG的一个page，操作系统只写了一半到磁盘上，这种现象称之为页折断。
-
-<div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</div>
 
 ```mermaid
 graph TB;
@@ -22,9 +12,9 @@ graph TB;
 
 当出现页折断后，页的操作可能只完成了一部分，导致磁盘上的页同时存在新旧数据，这个时候，仅通过wal的数据更改记录，并不足以恢复该页面。
 
-目前市面上的数据库，解决页折断问题，一般有两种方法，一种是full_page_write，一种是double write。
+目前市面上的数据库，解决页折断问题，一般有两种方法，一种是full_page_writes，一种是double write。
 
-  采用full_page_write的数据库：
+  采用full_page_writes的数据库：
 
 - PostgreSQL
   
@@ -36,7 +26,7 @@ graph TB;
 
 - MySQL
 
-### full_page_write
+### full_page_writes
 
 full_page_write是PostgreSQL的GUC参数，如果启用了此参数，在PG执行了checkpoint后，会将Buffer Poll中首次修改的page，整个page连同DML修改语句，都存储到wal日志中。
 
@@ -229,3 +219,9 @@ graph LR
   #define XLogRecBlockImageApply(decoder, block_id) \    ((decoder)->blocks[block_id].apply_image)
   功能：判断是否需要重放该image;
 ```
+
+## 总结
+
+- linux下，可使用getconf PAGE_SIZE指令，查看系统的块大小；
+- PostgreSQL的块大小，在编译pg时，可以通过--with-blocksize 参数修改；
+- 启用full_page_writes参数，必然带来性能的损耗，是否启用full_page_writes，需要看存储设备是否能避免半页写的问题，以及是否有其他手段恢复坏块等；
