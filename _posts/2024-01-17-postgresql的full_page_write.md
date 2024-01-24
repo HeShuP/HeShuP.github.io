@@ -1,8 +1,18 @@
+<script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script><script>mermaid.initialize({startOnLoad:true});</script>
+
 ## 概念介绍
 
 ### 页断裂
 
 页断裂也可以称为页折断或者半页写。PostgreSQL中，一个page默认为8kb，数据的写入是以page为单位的。而操作系统的一个page往往是4kb或者更小，这将导致PostgreSQL在写一个page到磁盘时，操作系统可能会将PG的一个page，分两次写入到磁盘。  如果系统出现故障，则会出现PG的一个page，操作系统只写了一半到磁盘上，这种现象称之为页折断。
+
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
 
 ```mermaid
 graph TB;
