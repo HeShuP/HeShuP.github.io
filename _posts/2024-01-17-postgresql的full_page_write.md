@@ -5,8 +5,9 @@
 页断裂也可以称为页折断或者半页写。PostgreSQL中，一个page默认为8kb，数据的写入是以page为单位的。而操作系统的一个page往往是4kb或者更小，这将导致PostgreSQL在写一个page到磁盘时，操作系统可能会将PG的一个page，分两次写入到磁盘。  如果系统出现故障，则会出现PG的一个page，操作系统只写了一半到磁盘上，这种现象称之为页折断。
 
 ```mermaid
-graph TB
-  PostgreSQL -- page=8kb --> OS -- page=4kb--> Disk
+graph TB;
+  PostgreSQL -- page=8kb --> OS;
+  OS -- page=4kb --> Disk;
 ```
 
 当出现页折断后，页的操作可能只完成了一部分，导致磁盘上的页同时存在新旧数据，这个时候，仅通过wal的数据更改记录，并不足以恢复该页面。
@@ -203,7 +204,7 @@ graph LR
   XLogReadBufferForRedoExtended --> RestoreBlockImage
 ```
 
-部分函数功能说明：
+部分函数功能说明：<sup></sup>
 
 ```C
   bool DecodeXLogRecord(XLogReaderState *state, XLogRecord *record, char **errormsg)
