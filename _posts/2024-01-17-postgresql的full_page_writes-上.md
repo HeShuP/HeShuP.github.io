@@ -241,7 +241,7 @@ graph LR
   功能：判断是否需要重放该image;
 ```
 
-## 总结
+## 小结
 
 - linux下，可使用getconf PAGE_SIZE指令，查看系统的块大小；
 - PostgreSQL的块大小，在编译pg时，可以通过--with-blocksize 参数修改；

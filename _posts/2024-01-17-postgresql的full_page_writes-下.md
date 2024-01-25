@@ -69,11 +69,11 @@ typedef struct PageHeaderData
 4. 插入xlog记录   
 - XLogInsert
   
-  - GetFullPageWriteInfo(&RedoRecPtr, &doPageWrites); 
-    判断是否执行全页写
+  - 判断是否执行全页写?
+    GetFullPageWriteInfo(&RedoRecPtr, &doPageWrites);
   
-  - XLogRecordAssemble(rmid, info, RedoRecPtr, doPageWrites, &fpw_lsn); 
-    组装xlog日志
+  - 组装xlog日志
+    XLogRecordAssemble(rmid, info, RedoRecPtr, doPageWrites, &fpw_lsn); 
     
     - XLogRecPtr page_lsn = PageGetLSN(regbuf->page); 
       **此处PageGetLSN获取的LSN,为上一次更新该page，记录的LSN**
@@ -85,9 +85,11 @@ typedef struct PageHeaderData
 
 - 设置page的LSN
   PageSetLSN(page, recptr);    //xlog日志插入之后，再更新该page的LSN
-  
-  5. 释放buf上添加的锁
+5. 释放buf上添加的锁
+   
+   ```C
      UnlockReleaseBuffer(buf);
+   ```
 
 ## 坏块修复
 
