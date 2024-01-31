@@ -618,7 +618,7 @@ VACUUM pg_catalog.pg_proc;
 VACUUM pg_catalog.pg_depend;
 VACUUM pg_catalog.pg_attribute;
 VACUUM pg_catalog.pg_description;
-VACUUM pg_catalog.pgag-0-1hlc17elnag-1-1hlc17eln_collation;
+VACUUM pg_catalog.pgag-0-1hlc17elnag-1-1hlc17elnag-0-1hlc17elnag-1-1hlc17eln_collation;
 VACUUM pg_catalog.pg_statistic;
 VACUUM pg_catalog.pg_class;
 VACUUM pg_catalog.pg_operator;
@@ -642,12 +642,12 @@ VACUUM pg_catalog.pg_conversion;
 
 ```shell
 [coder@localhost build_postgres]$ ./bin/vacuumlo -h localhost -p 5433 -U system postgres
-[coder@localhost build_postgres]$ag-0-1hlc17elnag-1-1hlc17eln
+[coder@localhost build_postgres]$
 ```
 
 ### 小结
 
 参考资料：
 
-- http://www.postgres.cn/docs/12/reference-client.html
-- http://www.postgres.cn/docs/12/reference-server.html
+- PostgreSQL 客户端应用: [http://www.postgres.cn/docs/12/reference-client.html]([PostgreSQL 客户端应用](http://www.postgres.cn/docs/12/reference-client.html))
+- PostgreSQL 服务器应用: [http://www.postgres.cn/docs/12/reference-server.html]([PostgreSQL 服务器应用](http://www.postgres.cn/docs/12/reference-server.html))
