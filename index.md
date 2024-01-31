@@ -3,15 +3,17 @@
 ### 计算机基础类
 
 * [long类型占用多少个字节 ？](_posts/2022-02-20-long数据类型的长度.md)
-* [Linux常用命令](_posts/2024-01-25-Linux常用命令.md)
+* [Linux常用的命令](_posts/2024-01-25-Linux常用的命令.md)
 
 ### 数据库类
 
 * [1.0 PostgreSQL简介](_posts/2022-12-19-PostgreSQL介绍.md)
 * [1.1 PostgreSQL编译和安装](_posts/2022-12-19-PostgreSQL编译和安装.md)
-* [1.2 PostgreSQL的锁](_posts/2024-01-11-PostgreSQL的锁.md)
-* [1.3 postgresql的页折断问题-上](_posts/2024-01-17-postgresql的full_page_writes-上.md)
-* [1.4 postgresql的页折断问题-下](_posts/2024-01-17-postgresql的full_page_writes-下.md)
+* [1.2 PostgreSQL的二进制介绍](_posts/2024-01-16-PostgreSQL的二进制.md)
+* [1.3 PostgreSQL的data目录结构介绍](_posts/2024-01-16-PostgreSQL的data目录结构.md)
+* [1.4 PostgreSQL的锁](_posts/2024-01-11-PostgreSQL的锁.md)
+* [1.5 postgresql的页折断问题-上](_posts/2024-01-17-postgresql的full_page_writes-上.md)
+* [1.6 postgresql的页折断问题-下](_posts/2024-01-17-postgresql的full_page_writes-下.md)
 
 ### 观点看法类
 
@@ -19,6 +21,6 @@
 
 ## About Me
 
-[csdn：https://blog.csdn.net/rl529014](https://blog.csdn.net/rl529014)  
-[bilibili: https://space.bilibili.com/84360636?spm_id_from=333.1007.0.0](https://space.bilibili.com/84360636?spm_id_from=333.1007.0.0)  
-建设中...  
+1. [csdn：https://blog.csdn.net/rl529014](https://blog.csdn.net/rl529014)
+2. [bilibili: https://space.bilibili.com/84360636?spm_id_from=333.1007.0.0](https://space.bilibili.com/84360636?spm_id_from=333.1007.0.0)
+3. 建设中...  
