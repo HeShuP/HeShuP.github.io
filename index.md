@@ -3,7 +3,7 @@
 ### 计算机基础类
 
 * [long类型占用多少个字节 ？](_posts/2022-02-20-long数据类型的长度.md)
-* [Linux常用的命令](_posts/2024-01-25-Linux常用的命令.md)
+* [Linux常用命令](_posts/2024-01-25-Linux常用命令.md)
 
 ### 数据库类
 
@@ -14,6 +14,7 @@
 * [1.4 PostgreSQL的锁](_posts/2024-01-11-PostgreSQL的锁.md)
 * [1.5 postgresql的页折断问题-上](_posts/2024-01-17-postgresql的full_page_writes-上.md)
 * [1.6 postgresql的页折断问题-下](_posts/2024-01-17-postgresql的full_page_writes-下.md)
+* [1.7 wal文件回收](_posts/2024-01-31- wal文件的创建时间问题.md)
 
 ### 观点看法类
 

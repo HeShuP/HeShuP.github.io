@@ -6,7 +6,7 @@
 
 ### 整体结构
 
-PostgreSQL数据库的data目录，整个结构如下:
+PostgreSQL数据库的data目录，整个结构如下,其中base、global目录，主要存储数据文件，其他目录则主要存储运行参数和配置等信息。
 
 ```shell
 [coder@localhost build_postgres]$ tree data/ -L 1
@@ -74,7 +74,7 @@ data/
 #### global
 
 - 作用
-  - 存放整个cluster共享的全局表、控制文件等；
+  - 存放整个cluster共享的全局表、pg_control控制文件等；
 - 示例
 
 ```shell
