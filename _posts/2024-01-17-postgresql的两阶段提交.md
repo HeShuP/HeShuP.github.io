@@ -8,7 +8,6 @@ postgresql的两阶段提交；
 
 GID,全局ID；
 
-
 PG 提供了一组命令用于 2PC 事务，如下：
 prepare transaction 'xxx'
 commit prepared 'xxx'
