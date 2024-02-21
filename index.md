@@ -16,6 +16,7 @@
 * [1.6 postgresql的页折断问题-下](_posts/2024-01-17-postgresql的full_page_writes-下.md)
 * [1.7 wal文件的回收机制](_posts/2024-01-31-wal文件的回收机制.md)
 * [1.8 checkpointer进程的进化](_posts/2024-02-20-checkpointer进程的进化.md)
+* [1.9 PostgreSQL的wal文件归档](_posts/2024-02-21-PostgreSQL的wal文件归档.md)
 
 ### 观点看法类
 
