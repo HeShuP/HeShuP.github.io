@@ -84,3 +84,14 @@ graph TB;
 - 当archiver进程启动后，进入pgarch_MainLoop主循环,循环检测是否存在.ready文件；
 - 当检查到.ready文件，归档对应的xlog文件，然后将xxx.ready文件重命名为xxx.done；
 - 在执行checkpoint时，会删除.done文件，避免无限增长；
+
+调用流程如下：
+
+```mermaid
+graph LR;
+PgArchiverMain --> pgarch_MainLoop
+pgarch_MainLoop --> pgarch_ArchiverCopyLoop
+pgarch_ArchiverCopyLoop --> pgarch_readyXlog
+pgarch_readyXlog -- 执行归档命令,归档xlog文件 --> pgarch_archiveXlog
+pgarch_readyXlog -- 将xxx.ready信号文件重命名为xxx.done --> pgarch_archiveDone
+```
