@@ -17,6 +17,7 @@
 * [1.7 wal文件的回收机制](_posts/2024-01-31-wal文件的回收机制.md)
 * [1.8 checkpointer进程的进化](_posts/2024-02-20-checkpointer进程的进化.md)
 * [1.9 PostgreSQL的wal文件归档](_posts/2024-02-21-PostgreSQL的wal文件归档.md)
+* [2.0 PostgreSQL查看执行计划](_posts/2025-07-03-PostgreSQL查看执行计划.md)
 
 ### 观点看法类
 
