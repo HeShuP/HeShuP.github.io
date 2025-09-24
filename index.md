@@ -18,6 +18,8 @@
 * [1.8 checkpointer进程的进化](_posts/2024-02-20-checkpointer进程的进化.md)
 * [1.9 PostgreSQL的wal文件归档](_posts/2024-02-21-PostgreSQL的wal文件归档.md)
 * [2.0 PostgreSQL查看执行计划](_posts/2025-07-03-PostgreSQL查看执行计划.md)
+* [2.1 linux pam介绍](_posts/2025-08-08-linux pam介绍.md)
+* [2.2 PostgreSQL通过DSM创建插件](_posts/2025-09-15-PostgreSQL通过DSM创建插件.md)
 
 ### 观点看法类
 
